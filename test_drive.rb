@@ -8,7 +8,7 @@ p fibs 5
 p fibs 10
 
 puts "fibs_rec method"
-p fibs_rec 1
-p fibs_rec 2
-p fibs_rec 5
-p fibs_rec 10
+puts fibs_rec 1
+puts fibs_rec 2
+puts fibs_rec 5
+puts fibs_rec 10

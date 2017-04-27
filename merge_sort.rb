@@ -1,7 +1,8 @@
-def merge a, b, c
+def merge a, b
   i = 0
   j = 0
   k = 0
+  c = []
 
   until i == a.length or j == b.length
     if a[i] < b[j]
@@ -18,11 +19,10 @@ end
 
 def merge_sort arr
   n = arr.length
-  if n > 1
-    left_half =arr[0..(n / 2 - 1)]
-    right_half =arr[(n / 2)..(n - 1)]
-    merge_sort(left_half)
-    merge_sort(right_half)
-    return merge left_half, right_half, arr
-  end
+  return arr if n < 2
+  left_half =arr[0..(n / 2 - 1)]
+  right_half =arr[(n / 2)..(n - 1)]
+  left_half = merge_sort(left_half)
+  right_half = merge_sort(right_half)
+  merge left_half, right_half
 end
